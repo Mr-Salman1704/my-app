@@ -6,13 +6,15 @@ Text,
 TextInput,
 ScrollView,
 TouchableOpacity,
-SafeAreaView,
+
 StatusBar,
 StyleSheet,
 Alert,
 KeyboardAvoidingView,
 Platform,
 } from 'react-native';
+
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
 const [screen, setScreen] = useState('welcome');
