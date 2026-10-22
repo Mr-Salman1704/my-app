@@ -189,6 +189,37 @@ showNotice(
 );
 
 };
+  const pickProductImage = async () => {
+try {
+const permission =
+await ImagePicker.requestMediaLibraryPermissionsAsync();
+
+  if (!permission.granted) {
+    Alert.alert(
+      'Permission required',
+      'Allow ZimMarket to access your photos so you can upload product pictures.'
+    );
+    return;
+  }
+
+  const result = await ImagePicker.launchImageLibraryAsync({
+    mediaTypes: ['images'],
+    allowsEditing: true,
+    aspect: [4, 3],
+    quality: 0.8,
+  });
+
+  if (!result.canceled && result.assets?.length > 0) {
+    setProductImage(result.assets[0].uri);
+  }
+} catch (error) {
+  Alert.alert(
+    'Photo error',
+    'We could not open your gallery. Please try again.'
+  );
+}
+
+};
   const addProduct = () => {
     if (!productName.trim() || !productPrice.trim()) {
       showNotice(
