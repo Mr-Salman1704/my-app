@@ -951,6 +951,29 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
             'Add a Product',
             'Show Zimbabwe what your business offers.'
           )}
+          <TouchableOpacity
+style={styles.productImagePlaceholder}
+onPress={pickProductImage}
+>
+{productImage ? (
+<Image
+source={{ uri: productImage }}
+style={{
+width: '100%',
+height: 180,
+borderRadius: 12,
+}}
+resizeMode="cover"
+/>
+) : (
+<View style={{ alignItems: 'center' }}>
+<Text style={styles.productEmoji}>📷</Text>
+<Text style={styles.fieldLabel}>
+Tap to choose a product photo
+</Text>
+</View>
+)}
+</TouchableOpacity>
 
           {input(
             'Product name',
