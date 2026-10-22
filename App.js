@@ -650,6 +650,16 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
                         goTo('product');
                       }}
                     >
+                      {product.image ? (
+  <Image
+    source={{ uri: product.image }}
+    style={{
+      width: '100%',
+      height: 115,
+    }}
+    resizeMode="cover"
+  />
+) : (
                       <Text style={styles.productEmoji}>
                         {product.category === 'Clothing & Fashion'
                           ? '👕'
@@ -673,6 +683,7 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
                           ? '🎨'
                           : '💼'}
                       </Text>
+                      )}
                     </TouchableOpacity>
 
                     <View style={styles.productInfo}>
