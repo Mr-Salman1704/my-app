@@ -34,7 +34,7 @@ const [productName, setProductName] = useState('');
 const [productPrice, setProductPrice] = useState('');
 const [productDescription, setProductDescription] = useState('');
 const [productCategory, setProductCategory] = useState('Clothing & Fashion');
-  const [productImage, setProductImage] = useState(null);
+const [productImage, setProductImage] = useState(null);
 const [messages, setMessages] = useState([]);
 const [currentUser, setCurrentUser] = useState(null);
 
