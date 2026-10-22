@@ -234,6 +234,7 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
       name: productName.trim(),
       price: productPrice.trim(),
       category: productCategory,
+      image: productImage,
       description:
         productDescription.trim() || 'Contact the seller for details.',
       seller:
@@ -247,6 +248,7 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
     setProductName('');
     setProductPrice('');
     setProductDescription('');
+    setProductImage(null);
     setScreen('home');
 
     showNotice(
