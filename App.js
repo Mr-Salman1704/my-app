@@ -4,6 +4,7 @@ import {
 View,
 Text,
 TextInput,
+Image,
 ScrollView,
 TouchableOpacity,
 
@@ -15,6 +16,7 @@ Platform,
 } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
+import * as ImagePicker from 'expo-image-picker';
 
 export default function App() {
 const [screen, setScreen] = useState('welcome');
@@ -32,6 +34,7 @@ const [productName, setProductName] = useState('');
 const [productPrice, setProductPrice] = useState('');
 const [productDescription, setProductDescription] = useState('');
 const [productCategory, setProductCategory] = useState('Clothing & Fashion');
+  const [productImage, setProductImage] = useState(null);
 const [messages, setMessages] = useState([]);
 const [currentUser, setCurrentUser] = useState(null);
 
