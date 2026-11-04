@@ -1733,6 +1733,12 @@ const styles = StyleSheet.create({
   detailEmoji: {
     fontSize: 75,
   },
+  detailProductImage: {
+  width: '100%',
+  height: '100%',
+  borderRadius: 18,
+  resizeMode: 'cover',
+},
 
   detailPrice: {
     color: '#B38706',
