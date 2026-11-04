@@ -794,9 +794,18 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
       style={styles.detailProductImage}
     />
   ) : (
+    <View style={styles.detailImage}>
+  {selectedProduct.image ? (
+    <Image
+      source={{ uri: selectedProduct.image }}
+      style={styles.detailProductImage}
+    />
+  ) : (
     <Text style={styles.detailEmoji}>🛍️</Text>
   )}
 </View>
+
+
               
             
 
