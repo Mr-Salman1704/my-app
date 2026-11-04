@@ -1493,6 +1493,9 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: '900',
   },
+  homeLogoZim: {
+  color: '#FFFFFF',
+},
 
   homeGreeting: {
     color: '#FFFFFF',
