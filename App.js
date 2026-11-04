@@ -546,7 +546,7 @@ await ImagePicker.requestMediaLibraryPermissionsAsync();
           <View style={styles.homeHeader}>
             <View>
               <Text style={styles.homeLogo}>
-                <Text style={styles.logoZim}>Zim</Text>
+                <Text style={styles.homelogoZim}>Zim</Text>
                 <Text style={styles.logoMarket}>Market</Text>
               </Text>
 
